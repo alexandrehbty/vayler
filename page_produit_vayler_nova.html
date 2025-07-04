@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Vayler Nova - Sneakers Blanches & Argentées Futuristes | Vayler</title>
+    <meta name="description" content="Découvrez la Vayler Nova. Une silhouette sculpturale où le blanc pur rencontre des éclats d'argent liquide. La sneaker futuriste qui allie design avant-gardiste et confort.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Vayler Nova",
+      "image": [
+        "Vayler-Saphyr-img.jpg",
+        "Vayler-Saphyr-man-model-img.jpg",
+        "Vayler-Saphyr-woman-model.jpg"
+       ],
+      "description": "La Vayler Nova est plus qu'une sneaker, c'est une pièce de design. Ses lignes pures et blanches sont traversées par des vagues d'argent liquide qui captent la lumière à chaque pas.",
+      "sku": "VAYLER-NOVA-BLANC",
+      "brand": {
+        "@type": "Brand",
+        "name": "Vayler"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "25"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "#",
+        "priceCurrency": "EUR",
+        "price": "95.00",
+        "priceValidUntil": "2025-12-31",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "home_page_copie_vids.html"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Nos Sneakers",
+        "item": "page_nos_sneakers.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Vayler Nova"
+      }]
+    }
+    </script>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; color: #333; }
+        .banner { background-color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: relative; height: 80px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-bottom: 1px solid #eee; }
+        .nav-left, .nav-right { display: flex; align-items: center; gap: 20px; flex: 1; }
+        .nav-right { justify-content: flex-end; }
+        .logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+        .logo img { max-height: 90px; }
+        .icon-button { background: none; border: none; cursor: pointer; padding: 5px; display: inline-flex; align-items: center; justify-content: center; position: relative; }
+        .icon-button svg { width: 28px; height: 28px; stroke: black; }
+        .sliding-menu { background-color: white; padding: 0 20px; text-align: center; border-bottom: 1px solid #eee; max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.4s ease-out; }
+        .sliding-menu.active { max-height: 500px; padding: 20px; }
+        .menu-button { display: inline-block; background-color: black; color: white; border: none; padding: 12px 25px; border-radius: 50px; font-size: 16px; cursor: pointer; text-decoration: none; margin: 5px 10px; }
+        main { padding: 40px 8%; }
+        .breadcrumb { font-size: 0.9rem; color: #6c757d; margin-bottom: 25px; }
+        .breadcrumb ol { list-style: none; padding: 0; margin: 0; }
+        .breadcrumb li { display: inline; }
+        .breadcrumb li::before { content: '/'; margin: 0 0.6em; color: #adb5bd; }
+        .breadcrumb li:first-child::before { content: ''; margin: 0; }
+        .breadcrumb a { color: #6c757d; text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .product-page-container { display: flex; gap: 50px; background-color: white; padding: 40px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); align-items: flex-start; }
+        .product-gallery { flex: 1; position: relative; border-radius: 15px; overflow: hidden; }
+        .gallery-image { width: 100%; height: auto; object-fit: cover; display: none; }
+        .gallery-image.active { display: block; }
+        .gallery-nav button { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(255, 255, 255, 0.8); border-radius: 50%; width: 45px; height: 45px; cursor: pointer; border: 1px solid #ddd; }
+        #prev-btn { left: 15px; }
+        #next-btn { right: 15px; }
+        .product-details { flex: 1; display: flex; flex-direction: column; }
+        .product-title { font-size: 2.8rem; margin: 0 0 10px 0; font-weight: 700; }
+        .product-price { font-size: 2rem; color: #007bff; margin-bottom: 25px; font-weight: 500; }
+        .product-description { font-size: 1rem; line-height: 1.6; color: #555; }
+        .product-description h2 { font-size: 1.4rem; margin-top: 20px; margin-bottom: 10px; font-weight: 600; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; }
+        .product-description p, .product-description ul { font-size: 1rem; line-height: 1.6; color: #555; }
+        .product-description ul { list-style-position: inside; padding-left: 0; }
+        .product-actions { display: flex; gap: 15px; margin-top: 30px; }
+        .action-btn { flex-grow: 1; padding: 12px 20px; font-size: 0.95rem; font-weight: 600; border-radius: 50px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.3s ease; text-decoration: none; }
+        .action-btn svg { width: 20px; height: 20px; }
+        .add-to-cart-btn { background-color: black; color: white; }
+        .add-to-cart-btn:hover { background-color: #333; }
+        .wishlist-btn { background-color: #f0f0f0; color: black; }
+        .wishlist-btn:hover { background-color: #e0e0e0; }
+        .product-rating { display: flex; align-items: center; gap: 8px; margin-bottom: 15px; }
+        .product-rating .stars svg { width: 20px; height: 20px; fill: #FFD700; stroke: #FFD700; }
+        .product-rating .review-count { font-size: 0.9rem; color: #555; text-decoration: none; }
+        .product-rating .review-count:hover { text-decoration: underline; }
+        .product-options { margin-top: 25px; margin-bottom: 25px; display: flex; gap: 20px; align-items: flex-start; }
+        .option-group { flex: 1; }
+        .option-group label { display: block; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; color: #333; }
+        .option-group select { width: 100%; padding: 12px; font-size: 1rem; border-radius: 8px; border: 1px solid #ddd; background-color: #fff; appearance: none; background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23333333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 12px center; background-size: 1em; cursor: pointer; }
+        .option-value-static { font-size: 1rem; font-weight: 500; color: #333; padding: 12px; background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; }
+        .stock-status { margin-top: 15px; font-weight: 600; color: #28a745; display: flex; align-items: center; gap: 8px; }
+        .stock-status::before { content: ''; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background-color: #28a745; }
+        .reassurance-block { margin-top: 25px; padding-top: 25px; border-top: 1px solid #eee; display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
+        .reassurance-item { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: #555; }
+        .reassurance-item svg { width: 24px; height: 24px; stroke: #555; stroke-width: 1.5; }
+        .product-reviews-section { margin-top: 25px; padding-top: 25px; border-top: 1px solid #eee; text-align: left;}
+        .product-reviews-section h2 { font-size: 1.4rem; margin: 0;}
+        .cart-item-count { position: absolute; top: -5px; right: -8px; background-color: red; color: white; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; font-weight: bold; display: flex; align-items: center; justify-content: center; transform: scale(0); transition: transform 0.2s ease-out; }
+        .cart-item-count.visible { transform: scale(1); }
+        .cart-container { position: relative; }
+        .mini-cart-popover { position: absolute; top: calc(100% + 10px); right: -15px; background-color: white; border: 1px solid #eee; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.12); width: 380px; padding: 20px; z-index: 1000; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s; }
+        .cart-container:hover .mini-cart-popover { opacity: 1; visibility: visible; transform: translateY(0); }
+        #mini-cart-items { list-style: none; padding: 0; margin: 0; max-height: 300px; overflow-y: auto; }
+        .mini-cart-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+        .mini-cart-item-image { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+        .mini-cart-item-info { flex-grow: 1; font-size: 0.9rem; }
+        .mini-cart-item-info span { display: block; }
+        .mini-cart-item-info .price { color: #888; margin-top: 4px;}
+        .mini-cart-item-quantity select { width: 55px; padding: 5px 8px; border: 1px solid #ddd; border-radius: 5px; background-color: #fff; cursor: pointer; }
+        .remove-item-btn { background: none; border: none; color: #999; cursor: pointer; font-size: 1.2rem; padding: 5px; }
+        .remove-item-btn:hover { color: red; }
+        .mini-cart-footer { margin-top: 20px; padding-top: 15px; border-top: 2px solid #333; }
+        .mini-cart-subtotal { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 15px; }
+        .btn-view-cart { display: block; width: 100%; background-color: black; color: white; text-align: center; padding: 10px; border-radius: 50px; text-decoration: none; box-sizing: border-box; }
+        .footer { background-color: #222; color: white; padding: 60px 40px 40px 40px; margin-top: 60px; }
+        .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; max-width: 1200px; margin: 0 auto 40px auto; text-align: left; }
+        .footer-column { flex: 1; min-width: 220px; }
+        .footer-column h3 { margin-top: 0; color: white; border-bottom: 1px solid #555; padding-bottom: 10px; }
+        .footer-column a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; transition: color 0.2s; }
+        .footer-column a:hover { color: white; }
+        .footer-newsletter input { width: 100%; background: #333; border: 1px solid #555; color: white; padding: 12px; border-radius: 5px; margin-bottom: 10px; box-sizing: border-box; }
+        .footer-newsletter button { width: 100%; background-color: white; color: black; border: none; padding: 12px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        .footer-social { display: flex; gap: 15px; }
+        .footer-social a svg { width: 24px; height: 24px; fill: white; }
+        .footer-payments img { height: 24px; margin-right: 10px; background: white; border-radius: 3px; padding: 2px 4px; }
+        .footer-bottom { border-top: 1px solid #444; padding-top: 30px; margin-top: 40px; text-align: center; font-size: 0.9rem; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <header class="banner">
+        <div class="nav-left"> <button class="icon-button" id="hamburger-btn" aria-label="Ouvrir le menu"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg> </button> </div>
+        <div class="logo"> <a href="index.html"><img src="assets/img/logo_vayler.png" alt="Logo Vayler"></a> </div>
+        <div class="nav-right"> <a href="page_se_connecter.html" class="icon-button" aria-label="S'identifier ou créer un compte"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> </a> <a href="page_se_connecter.html" class="icon-button" aria-label="Liste de souhaits"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> </a> <div class="cart-container"> <a href="page_panier.html" class="icon-button" aria-label="Panier d'achats"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> <span class="cart-item-count">0</span> </a> <div class="mini-cart-popover" id="mini-cart"> <h4>Mon Panier</h4> <ul id="mini-cart-items"> <p>Votre panier est vide.</p> </ul> <div class="mini-cart-footer"> <div class="mini-cart-subtotal"> <span>Sous-total</span> <span id="subtotal-amount">0,00 €</span> </div> <a href="page_panier.html" class="btn-view-cart">Voir le Panier</a> </div> </div> </div> </div>
+    </header>
+    
+    <nav class="sliding-menu" id="sliding-menu">
+        <a href="page_nos_sneakers.html" class="menu-button">Nos sneakers</a>
+        <a href="page_nos_accessoires.html" class="menu-button">Nos accessoires</a>
+        <a href="page_contact.html" class="menu-button">Contact</a>
+    </nav>
+
+    <main>
+        <nav aria-label="Fil d'Ariane" class="breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page_nos_sneakers.html">Nos Sneakers</a></li>
+                <li><a href="page_produit_vayler_nova.html" aria-current="page">Vayler Nova</a></li>
+            </ol>
+        </nav>
+        <div class="product-page-container">
+            <div class="product-gallery">
+                <img src="assets/img/img_vayler_nova.jpg" alt="Sneakers Vayler Nova blanche avec des accents argentés chromés." class="gallery-image active">
+                <img src="assets/img/img_vayler_nova_man_model.jpg" alt="Mannequin homme portant la Vayler Nova avec une tenue noire." class="gallery-image">
+                <img src="assets/img/img_vayler_nova_woman_model.png" alt="Mannequin femme accroupie portant la Vayler Nova avec une tenue noire." class="gallery-image">
+                <div class="gallery-nav"> <button id="prev-btn" aria-label="Image précédente"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg> </button> <button id="next-btn" aria-label="Image suivante"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg> </button> </div>
+            </div>
+            <div class="product-details">
+                <h1 class="product-title">Vayler Nova</h1>
+                <div class="product-rating"> <span class="stars"> <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg> <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg> <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg> <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg> <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg> </span> <a href="#reviews" class="review-count">(18 Avis)</a> </div>
+                <span class="product-price">95,00 €</span>
+                <div class="product-description">
+                    <h2>Une Silhouette Sculptée dans la Lumière</h2>
+                    <p>La Vayler Nova est plus qu'une sneakers, c'est une pièce de design. Ses lignes pures et blanches sont traversées par des vagues d'argent liquide qui captent la lumière à chaque pas. Elle offre une esthétique futuriste et un confort qui vous ancre dans le présent.</p>
+                    <h2>Caractéristiques</h2>
+                    <ul>
+                        <li>Design épuré blanc rehaussé d'inserts argent métallique.</li>
+                        <li>Semelle sculpturale pour une allure et un soutien inégalés</li>
+                        <li>Matériaux premium pour un confort durable.</li>
+                        <li>L'alliance parfaite de la mode avant-gardiste et du sportswear.</li>
+                    </ul>
+                </div>
+                <div class="product-options">
+                    <div class="option-group"> <label>Couleur</label> <div class="option-value-static">Blanc / Argent</div> </div>
+                    <div class="option-group"> <label for="size-select">Taille</label> <select name="size" id="size-select"> <option value="40">40</option> <option value="41">41</option> <option value="42">42</option> <option value="43">43</option> <option value="44">44</option> <option value="45">45</option> </select> </div>
+                </div>
+                <div class="stock-status"> <span>En stock</span> </div>
+                <div class="product-actions"> <button class="action-btn add-to-cart-btn"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg> <span>Ajouter au Panier</span> </button> <a href="page_se_connecter.html" class="action-btn wishlist-btn"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> <span>Favoris</span> </a> </div>
+                <div class="reassurance-block"> <div class="reassurance-item"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M1 3h15v13H1z"></path><path d="M16 8h4l3 3v5h-7V8z"></path><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg> <span>Livraison sous 48h</span> </div> <div class="reassurance-item"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg> <span>Retours sous 30 jours</span> </div> <div class="reassurance-item"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> <span>Paiement Sécurisé</span> </div> </div>
+                <div id="reviews" class="product-reviews-section"> <h2>Avis sur le produit (18)</h2> </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>À Propos</h3>
+                <a href="page_nos_valeurs.html">Nos Valeurs</a>
+                <a href="page_conditions_générales_de_vente.html">Conditions générales de vente</a>
+                <a href="page_mentions_légales.html">Mentions légales</a>
+                <a href="page_conditions_de_retours.html">Conditions de retours</a>
+            </div>
+            <div class="footer-column">
+                <h3>Aide</h3>
+                <a href="page_contact.html">Contact</a>
+                <a href="page_faq.html">FAQ</a>
+                <a href="page_se_connecter.html">Suivi de commande</a>
+            </div>
+            <div class="footer-column footer-newsletter">
+                <h3>Newsletter</h3>
+                <p style="color:#ccc; font-size:0.9rem; margin-top:0;">Inscrivez-vous pour recevoir les nouveautés et offres exclusives.</p>
+                <form action="#">
+                    <input type="email" placeholder="Votre adresse email">
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Suivez-nous</h3>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="black" stroke-width="2"></line></svg></a>
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Paiements Sécurisés</h3>
+                <div class="footer-payments">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg" alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vayler. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerButton = document.getElementById('hamburger-btn');
+            const slidingMenu = document.getElementById('sliding-menu');
+            if (hamburgerButton && slidingMenu) { hamburgerButton.addEventListener('click', () => slidingMenu.classList.toggle('active')); }
+            const images = document.querySelectorAll('.gallery-image');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let currentIndex = 0;
+            function showImage(index) { if (images.length === 0) return; currentIndex = (index + images.length) % images.length; images.forEach(img => img.classList.remove('active')); images[currentIndex].classList.add('active'); }
+            if (images.length > 0) { nextBtn.addEventListener('click', () => showImage(currentIndex + 1)); prevBtn.addEventListener('click', () => showImage(currentIndex - 1)); }
+            
+            const addToCartBtn = document.querySelector('.add-to-cart-btn');
+            const cartItemCount = document.querySelector('.cart-item-count');
+            const miniCartItemsList = document.getElementById('mini-cart-items');
+            const subtotalAmount = document.getElementById('subtotal-amount');
+            let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+            function updateCartView() {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartItemCount.textContent = totalItems;
+                cartItemCount.classList.toggle('visible', totalItems > 0);
+                miniCartItemsList.innerHTML = '';
+                if (cart.length === 0) {
+                    miniCartItemsList.innerHTML = '<p>Votre panier est vide.</p>';
+                    subtotalAmount.textContent = '0,00 €';
+                    sessionStorage.removeItem('cart');
+                    return;
+                }
+                let currentSubtotal = 0;
+                cart.forEach(item => {
+                    let quantityOptions = '';
+                    for (let i = 1; i <= 5; i++) { quantityOptions += `<option value="${i}" ${i === item.quantity ? 'selected' : ''}>${i}</option>`; }
+                    const li = document.createElement('li');
+                    li.classList.add('mini-cart-item');
+                    li.innerHTML = `
+                        <img src="${item.imgSrc}" alt="${item.name}" class="mini-cart-item-image">
+                        <div class="mini-cart-item-info">
+                            <span>${item.name}</span>
+                            <span>Taille: ${item.size}</span>
+                            <span class="price">${item.price.toFixed(2)} €</span>
+                        </div>
+                        <div class="mini-cart-item-quantity">
+                            <select data-id="${item.id}" class="quantity-select">${quantityOptions}</select>
+                        </div>
+                        <button class="remove-item-btn" data-id="${item.id}" title="Supprimer">&times;</button>
+                    `;
+                    miniCartItemsList.appendChild(li);
+                    currentSubtotal += item.price * item.quantity;
+                });
+                subtotalAmount.textContent = `${currentSubtotal.toFixed(2)} €`;
+                sessionStorage.setItem('cart', JSON.stringify(cart));
+            }
+            updateCartView();
+
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', () => {
+                    const title = document.querySelector('.product-title').textContent;
+                    const priceString = document.querySelector('.product-price').textContent;
+                    const size = document.getElementById('size-select').value;
+                    const imgSrc = document.querySelector('.gallery-image.active').src;
+                    const price = parseFloat(priceString.replace('€', '').replace(',', '.'));
+                    const productId = `${title}-${size}`;
+                    const existingItem = cart.find(item => item.id === productId);
+                    if (existingItem) { if (existingItem.quantity < 5) { existingItem.quantity++; } } else { const newItem = { id: productId, name: title, price: price, size: size, imgSrc: imgSrc, quantity: 1 }; cart.push(newItem); }
+                    updateCartView();
+                    const originalText = addToCartBtn.querySelector('span').textContent;
+                    addToCartBtn.querySelector('span').textContent = 'Ajouté !';
+                    addToCartBtn.style.backgroundColor = '#28a745';
+                    setTimeout(() => { addToCartBtn.querySelector('span').textContent = originalText; addToCartBtn.style.backgroundColor = 'black'; }, 1500);
+                });
+            }
+            
+            if(miniCartItemsList) {
+                miniCartItemsList.addEventListener('change', (event) => {
+                    if (event.target.classList.contains('quantity-select')) {
+                        const itemId = event.target.dataset.id;
+                        const newQuantity = parseInt(event.target.value);
+                        const itemInCart = cart.find(item => item.id === itemId);
+                        if (itemInCart) { itemInCart.quantity = newQuantity; updateCartView(); }
+                    }
+                });
+                miniCartItemsList.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('remove-item-btn')) {
+                        const itemId = event.target.dataset.id;
+                        cart = cart.filter(item => item.id !== itemId);
+                        updateCartView();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
